@@ -1,5 +1,8 @@
 .rc-row {
   min-height: 200px;
+  margin-bottom: 20px;
+  margin-left: -.75rem;
+  margin-right: -.75rem;
 }
 .rc-row:after,
 .rc-row:before,
@@ -13,7 +16,10 @@
 
 .rc-col{
   float: left;
-  width: 100%
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 .75rem;
+  min-height: 1px;
 }
 
 .rc-col.s1 {
