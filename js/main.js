@@ -33,7 +33,7 @@ datos = [
     "titulo": "Indicador de scroll",
     "url": "https://gitlab.com/krrskl97/scroll-indicator",
     "descripcion": "Cómo crear un indicador de scroll usando JavaScript + Sass.",
-    "labels": ["Sass", "JavaScript", "Css"]
+    "labels": ["Sass", "JavaScript"]
   }
 
 ]
