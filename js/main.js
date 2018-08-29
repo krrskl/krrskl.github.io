@@ -3,32 +3,38 @@ datos = [
     "titulo": "Pre-carga de elementos.",
     "url": "https://stackblitz.com/edit/preview-load-elements",
     "descripcion": "He creado este diseño que podrás usar para mostrarlas al usuario mientras tu servidor responde.",
-    "labels": ["ionic", "angular", "css"]
+    "labels": ["Ionic", "Angular", "Css"]
   },
   {
     "titulo": "Vista única de cuestionario.",
     "url": "https://stackblitz.com/edit/test-page",
     "descripcion": "Diseño de vista única tipo  cuestionario.",
-    "labels": ["ionic", "angular", "css"]
+    "labels": ["Ionic", "Angular", "Css"]
   },
   {
     "titulo": "Cards sociales.",
     "url": "https://stackblitz.com/edit/social-cards-ionic",
     "descripcion": "Diseño de cards estilo social.",
-    "labels": ["ionic", "angular", "css"]
+    "labels": ["Ionic", "Angular", "Css"]
   },
   {
     "titulo": "Botones sociales.",
     "url": "https://codepen.io/krrskl/pen/gjdzyp",
     "descripcion": "Diseño de unos botones sociales.",
-    "labels": ["css"]
+    "labels": ["Css"]
   },
   {
     "titulo": "Firma de correo.",
     "url": "https://codepen.io/krrskl/pen/KBbevg",
     "descripcion": "Creando mi firma para Gmail.",
-    "labels": ["css"]
+    "labels": ["Css"]
   },
+  {
+    "titulo": "Indicador de scroll",
+    "url": "https://gitlab.com/krrskl97/scroll-indicator",
+    "descripcion": "Cómo crear un indicador de scroll usando JavaScript + Sass.",
+    "labels": ["Sass", "JavaScript", "Css"]
+  }
 
 ]
 
