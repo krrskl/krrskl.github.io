@@ -38,12 +38,21 @@ datos = [
 
 ]
 
+trabajos = [
+{
+"titulo": "Lector QR",
+"url": "none",
+"descripcion": "nada aún",
+"labels": ["Android"]
+}
+]
+
 $(function () {
   datos.forEach(element => {
     let labels = [];
     element.labels.forEach(label => {
-      labels.push(`<strong>${label}</strong>`)
-    })
+      labels.push(`<strong>${label}</strong>`);
+    });
     $(".desing-inspiration").append(`
       <a href="${element.url}" target="_blank" rel="noopener noreferrer">
         <div class="rc-col s6 l3">
@@ -66,5 +75,35 @@ $(function () {
         </div>
       </a>
     `)
+  });
+  
+  
+  trabajos.forEach(element => {
+  let labels = [];
+  element.labels.forEach(label => {
+  labels.push(`<strong>${label}</strong>`)
+  })
+  $(".jobs").append(`
+  <a href="${element.url}" target="_blank" rel="noopener noreferrer">
+  <div class="rc-col s6 l3">
+  <div class="card">
+  <div class="card-header">
+  <strong>${element.titulo}</strong>
+  </div>
+  <div class="card-content">
+  <div class="link-action">
+  <a href="${element.url}" target="_blank" rel="noopener noreferrer">
+  <i class="fas fa-arrow-circle-right"></i>
+  </a>
+  </div>
+  ${element.descripcion}
+  </div>
+  <div class="labels">
+  ${labels}
+  </div>
+  </div>
+  </div>
+  </a>
+  `)
   });
 })
