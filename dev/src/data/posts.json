@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Pre-carga de elementos.",
+    "url": "https://stackblitz.com/edit/preview-load-elements",
+    "description": "He creado este diseño que podrás usar para mostrarlas al usuario mientras tu servidor responde.",
+    "labels": ["Ionic", "Angular", "Css"]
+  },
+  {
+    "title": "Vista única de cuestionario.",
+    "url": "https://stackblitz.com/edit/test-page",
+    "description": "Diseño de vista única tipo  cuestionario.",
+    "labels": ["Ionic", "Angular", "Css"]
+  },
+  {
+    "title": "Cards sociales.",
+    "url": "https://stackblitz.com/edit/social-cards-ionic",
+    "description": "Diseño de cards estilo social.",
+    "labels": ["Ionic", "Angular", "Css"]
+  },
+  {
+    "title": "Botones sociales.",
+    "url": "https://codepen.io/krrskl/pen/gjdzyp",
+    "description": "Diseño de unos botones sociales.",
+    "labels": ["Css"]
+  },
+  {
+    "title": "Firma de correo.",
+    "url": "https://codepen.io/krrskl/pen/KBbevg",
+    "description": "Creando mi firma para Gmail.",
+    "labels": ["Css"]
+  },
+  {
+    "title": "Indicador de scroll",
+    "url": "https://gitlab.com/krrskl97/scroll-indicator",
+    "description": "Cómo crear un indicador de scroll usando JavaScript + Sass.",
+    "labels": ["Sass", "JavaScript"]
+  }
+]
