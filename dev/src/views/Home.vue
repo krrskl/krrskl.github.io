@@ -138,6 +138,7 @@ export default {
     background: #f34636;
     position: absolute;
     width: calc(100% - 1rem);
+    top: 0;
     height: 5px;
     border-radius: 5px;
     transform: scaleX(0);
@@ -170,7 +171,15 @@ export default {
     padding: 0.5rem;
     color: var(--text-primary);
     z-index: 1;
-    position: relative;
+    position: absolute;
+    top: 0;
+    height: 200px;
+    width: calc(100% - 1rem);
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
   }
   .card__footer {
     z-index: 1;
@@ -346,13 +355,13 @@ li a:hover {
   }
   100% {
     transform: scaleX(1.05);
-    height: 97%;
+    height: 100%;
   }
 }
 @keyframes no-hover-v {
   0% {
     transform: scaleX(1.05);
-    height: 97%;
+    height: 100%;
   }
   45% {
     height: 5px;

@@ -65,7 +65,7 @@ body {
   --gray: #f0f0f0;
 }
 * {
-  font-family: "KoHo", sans-serif;
+  font-family: "Dosis", sans-serif;
   user-select: none;
 }
 
