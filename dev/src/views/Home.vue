@@ -45,11 +45,16 @@
         <a href="#contact">Contacto</a>
       </li>
     </ul>
-
+    <br>
+    <br>
+    <h3>Estos son unos diseños que he creado para inspiración o utilidad de otros desarrolladores.</h3>
     <div class="row">
       <div v-for="(card, index) in data" v-bind:key="index" class="card">
         <div class="card__title">
-          <strong>{{card.title}}</strong>
+          <strong>
+            <a :href="card.url" target="_blank">{{card.title}}</a>
+          </strong>
+          <img src="./../assets/img/arrow-circle-right-solid.svg" width="18px">
         </div>
         <div class="card__content">
           <p>{{card.description}}</p>
@@ -92,26 +97,83 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.home > h3 {
+  margin: 0 1.5rem;
+  border-left: 3px solid #104dbf;
+  padding-left: 0.5rem;
+}
 .card {
+  &:hover,
+  &:focus {
+    &:before,
+    &:before {
+      animation: 0.5s forwards hover-v linear;
+      animation-fill-mode: forwards;
+    }
+    .card__title {
+      a {
+        mask-image: linear-gradient(
+          -75deg,
+          rgba(0, 0, 0, 0.6) 20%,
+          #000 50%,
+          rgba(0, 0, 0, 0.6) 60%
+        );
+        mask-size: 300%;
+        animation: shine 1s infinite;
+      }
+      img {
+        animation: showLink 1s ease forwards;
+      }
+    }
+  }
   padding: 3px 0.5rem;
   position: relative;
   background-color: var(--secondary);
   width: calc(100% - 1rem);
-  height: 300px;
+  height: 200px;
   border-radius: 5px;
   cursor: pointer;
+  &:before {
+    content: "";
+    background: #f34636;
+    position: absolute;
+    width: calc(100% - 1rem);
+    height: 5px;
+    border-radius: 5px;
+    transform: scaleX(0);
+    animation: 1.4s forwards no-hover-v linear;
+    animation-fill-mode: forwards;
+    z-index: 1;
+  }
   .card__title {
     text-align: center;
     padding: 0.5rem;
     color: var(--text-primary);
     font-weight: bold;
     border-bottom: 0.5px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      visibility: hidden;
+      transition: all 1s ease;
+    }
+    * {
+      z-index: 1;
+    }
+    a {
+      text-decoration: none;
+      color: var(--text-primary);
+    }
   }
   .card__content {
     padding: 0.5rem;
     color: var(--text-primary);
+    z-index: 1;
+    position: relative;
   }
   .card__footer {
+    z-index: 1;
     display: flex;
     position: absolute;
     bottom: 0px;
@@ -132,6 +194,28 @@ export default {
     }
   }
 }
+
+@keyframes showLink {
+  0% {
+    opacity: 0.8;
+    transform: translateX(-10rem);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(1rem);
+    transform: rotateZ(-35deg);
+  }
+}
+@keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
 .working {
   clip-path: polygon(0 25%, 100% 0, 100% 70%, 0 100%);
   background-image: linear-gradient(90deg, var(--primary) 0, var(--secondary));
@@ -146,10 +230,6 @@ export default {
     height: 200px;
   }
 }
-</style>
-
-
-<style scoped>
 header {
   background-image: linear-gradient(90deg, var(--primary) 0, var(--secondary));
   color: var(--text-primary);
@@ -173,6 +253,16 @@ header,
   width: calc(100% - 6rem);
   padding: 0 3rem;
   text-align: center;
+  strong {
+    mask-image: linear-gradient(
+      -75deg,
+      rgba(0, 0, 0, 0.6) 30%,
+      #000 50%,
+      rgba(0, 0, 0, 0.6) 70%
+    );
+    mask-size: 300%;
+    animation: shine 1s infinite;
+  }
 }
 ul {
   list-style-type: none;
@@ -236,6 +326,47 @@ li a:hover {
   .row {
     grid-auto-columns: calc(100vw - 3rem) !important;
     grid-template-areas: "a";
+  }
+  .card {
+    height: 200px !important;
+  }
+}
+
+@keyframes hover-v {
+  0% {
+    transform: scaleX(0);
+    height: 5px;
+  }
+  45% {
+    transform: scaleX(1.05);
+    height: 5px;
+  }
+  55% {
+    height: 5px;
+  }
+  100% {
+    transform: scaleX(1.05);
+    height: 97%;
+  }
+}
+@keyframes no-hover-v {
+  0% {
+    transform: scaleX(1.05);
+    height: 97%;
+  }
+  45% {
+    height: 5px;
+  }
+  55% {
+    transform: scaleX(1.05);
+    height: 5px;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleX(0);
+    height: 5px;
+    opacity: 0.02;
   }
 }
 </style>
