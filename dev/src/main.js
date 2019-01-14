@@ -4,7 +4,10 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import VueParticles from "vue-particles";
+import Scrollspy from 'vue2-scrollspy';
 
+
+Vue.use(Scrollspy);
 Vue.use(VueParticles);
 Vue.config.productionTip = false;
 

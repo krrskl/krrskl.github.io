@@ -1,74 +1,127 @@
 <template>
   <div class="home">
-    <header>
-      <vue-particles
-        color="#dedede"
-        :particleOpacity="0.7"
-        :particlesNumber="100"
-        shapeType="circle"
-        :particleSize="4"
-        linesColor="#dedede"
-        :linesWidth="0"
-        :lineLinked="true"
-        :lineOpacity="0"
-        :linesDistance="150"
-        :moveSpeed="3"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-      ></vue-particles>
-
-      <div class="text_index">
-        <h3>
-          Hola soy
-          <strong>Rubén Carrascal</strong>, bienvenido a mi página personal.
-        </h3>
-
-        <p>Estudio Ingeniería de Sistemas y me desempeño desarrollando
-          <br>aplicaciones para Android, iOS, y web.
-        </p>
-        <img src="./../assets/img/undraw_programming_2svr.svg" height="150px">
-      </div>
-    </header>
-    <ul>
+    <ul v-scroll-spy-active v-scroll-spy-link v-bind:class="{navTop: moveNav}">
       <li>
-        <a class="active" href="#home">Inicio</a>
+        <a>Inicio</a>
       </li>
       <li>
-        <a href="#design">Mis diseños</a>
+        <a>Mis diseños</a>
       </li>
       <li>
-        <a href="#jobs">Mis trabajos</a>
+        <a>Mis trabajos</a>
       </li>
       <li>
-        <a href="#contact">Contacto</a>
+        <a>Contacto</a>
       </li>
     </ul>
-    <br>
-    <br>
-    <h3>Estos son unos diseños que he creado para inspiración o utilidad de otros desarrolladores.</h3>
-    <div class="row">
-      <div v-for="(card, index) in data" v-bind:key="index" class="card">
-        <div class="card__title">
-          <strong>
-            <a :href="card.url" target="_blank">{{card.title}}</a>
-          </strong>
-          <img src="./../assets/img/arrow-circle-right-solid.svg" width="18px">
+    <div v-scroll-spy>
+      <div>
+        <header>
+          <vue-particles
+            color="#dedede"
+            :particleOpacity="0.7"
+            :particlesNumber="100"
+            shapeType="circle"
+            :particleSize="4"
+            linesColor="#dedede"
+            :linesWidth="0"
+            :lineLinked="true"
+            :lineOpacity="0"
+            :linesDistance="150"
+            :moveSpeed="3"
+            :hoverEffect="true"
+            hoverMode="grab"
+            :clickEffect="true"
+            clickMode="push"
+          ></vue-particles>
+
+          <div class="text_index">
+            <h3>
+              Hola soy
+              <strong>Rubén Carrascal</strong>, bienvenido a mi página personal.
+            </h3>
+
+            <p>Estudio Ingeniería de Sistemas y me desempeño desarrollando
+              <br>aplicaciones para Android, iOS, y web.
+            </p>
+            <img src="./../assets/img/undraw_programming_2svr.svg" height="150px">
+          </div>
+        </header>
+      </div>
+
+      <div>
+        <br>
+        <br>
+        <h3>Estos son unos diseños que he creado para inspiración o utilidad de otros desarrolladores.</h3>
+        <div class="row">
+          <div v-for="(card, index) in data" v-bind:key="index" class="card">
+            <div class="card__title">
+              <strong>
+                <a :href="card.url" target="_blank">{{card.title}}</a>
+              </strong>
+              <img src="./../assets/img/arrow-circle-right-solid.svg" width="18px">
+            </div>
+            <div class="card__content">
+              <p>{{card.description}}</p>
+            </div>
+            <div class="card__footer">
+              <span class="label" v-for="label in card.labels" v-bind:key="label.id">
+                <img :src="getIcon(label)" height="15px">
+                {{label}}
+              </span>
+            </div>
+          </div>
         </div>
-        <div class="card__content">
-          <p>{{card.description}}</p>
+      </div>
+
+      <div>
+        <h3>Estos son parte de los proyectos en los que he trabajado.</h3>
+        <div class="row">
+          <div v-for="(card, index) in data" v-bind:key="index" class="card">
+            <div class="card__title">
+              <strong>
+                <a :href="card.url" target="_blank">{{card.title}}</a>
+              </strong>
+              <img src="./../assets/img/arrow-circle-right-solid.svg" width="18px">
+            </div>
+            <div class="card__content">
+              <p>{{card.description}}</p>
+            </div>
+            <div class="card__footer">
+              <span class="label" v-for="label in card.labels" v-bind:key="label.id">
+                <img :src="getIcon(label)" height="15px">
+                {{label}}
+              </span>
+            </div>
+          </div>
         </div>
-        <div class="card__footer">
-          <span class="label" v-for="label in card.labels" v-bind:key="label.id">
-            <img :src="getIcon(label)" height="15px">
-            {{label}}
-          </span>
+      </div>
+
+      <div>
+        <h3>¿Quieres saludarme o seguirme en mis redes?, aquí te las dejo.</h3>
+        <div class="row">
+          <div v-for="(card, index) in data" v-bind:key="index" class="card">
+            <div class="card__title">
+              <strong>
+                <a :href="card.url" target="_blank">{{card.title}}</a>
+              </strong>
+              <img src="./../assets/img/arrow-circle-right-solid.svg" width="18px">
+            </div>
+            <div class="card__content">
+              <p>{{card.description}}</p>
+            </div>
+            <div class="card__footer">
+              <span class="label" v-for="label in card.labels" v-bind:key="label.id">
+                <img :src="getIcon(label)" height="15px">
+                {{label}}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="working">
+    <div class="working" id="element">
       <img src="./../assets/img/undraw_monitor_iqpq.svg">
       <h3>Aún sigo construyendo mi sitio...</h3>
     </div>
@@ -80,7 +133,8 @@ export default {
   name: "home",
   data() {
     return {
-      data: require("@/data/posts.json")
+      data: require("@/data/posts.json"),
+      moveNav: false
     };
   },
   mounted() {
@@ -91,12 +145,34 @@ export default {
       return require("./../assets/icons/file_type_" +
         name.toLowerCase() +
         ".svg");
+    },
+    handleScroll: function(event) {
+      if (document.getElementsByTagName("ul")[0].offsetTop <= scrollY)
+        this.moveNav = true;
+      else this.moveNav = false;
+
+      if (
+        document.getElementsByClassName("text_index")[0].clientHeight >= scrollY
+      )
+        this.moveNav = false;
     }
+  },
+  created: function() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed: function() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.navTop {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  width: auto;
+}
 .home > h3 {
   margin: 0 1.5rem;
   border-left: 3px solid #104dbf;
@@ -279,10 +355,12 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
+  /* position: -webkit-sticky; */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   z-index: 100;
+  transition: all 10s ease;
 }
 
 li {
@@ -330,7 +408,7 @@ li a:hover {
   header,
   .text_index,
   #particles-js {
-    height: 83vh !important;
+    height: 93vh !important;
   }
   .row {
     grid-auto-columns: calc(100vw - 3rem) !important;
