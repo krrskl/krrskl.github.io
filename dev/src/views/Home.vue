@@ -1,124 +1,146 @@
 <template>
   <div class="home">
-    <ul v-scroll-spy-active v-scroll-spy-link v-bind:class="{navTop: moveNav}">
-      <li>
-        <a>Inicio</a>
-      </li>
-      <li>
-        <a>Mis diseños</a>
-      </li>
-      <li>
-        <a>Mis trabajos</a>
-      </li>
-      <li>
-        <a>Contacto</a>
-      </li>
-    </ul>
-    <div v-scroll-spy>
-      <div>
-        <header>
-          <vue-particles
-            color="#dedede"
-            :particleOpacity="0.7"
-            :particlesNumber="100"
-            shapeType="circle"
-            :particleSize="4"
-            linesColor="#dedede"
-            :linesWidth="0"
-            :lineLinked="true"
-            :lineOpacity="0"
-            :linesDistance="150"
-            :moveSpeed="3"
-            :hoverEffect="true"
-            hoverMode="grab"
-            :clickEffect="true"
-            clickMode="push"
-          ></vue-particles>
+    <header id="home">
+      <vue-particles
+        color="#dedede"
+        :particleOpacity="0.7"
+        :particlesNumber="100"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="0"
+        :lineLinked="true"
+        :lineOpacity="0"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      ></vue-particles>
 
-          <div class="text_index">
-            <h3>
-              Hola soy
-              <strong>Rubén Carrascal</strong>, bienvenido a mi página personal.
-            </h3>
+      <div class="text_index">
+        <h3>
+          Hola soy
+          <strong>Rubén Carrascal</strong>, bienvenido a mi página personal.
+        </h3>
 
-            <p>Estudio Ingeniería de Sistemas y me desempeño desarrollando
-              <br>aplicaciones para Android, iOS, y web.
-            </p>
-            <img src="./../assets/img/undraw_programming_2svr.svg" height="150px">
-          </div>
-        </header>
+        <p>Estudio Ingeniería de Sistemas y me desempeño desarrollando
+          <br>aplicaciones para Android, iOS, y web.
+        </p>
+        <img src="./../assets/img/undraw_programming_2svr.svg" height="150px">
       </div>
-
-      <div>
-        <br>
-        <br>
-        <h3>Estos son unos diseños que he creado para inspiración o utilidad de otros desarrolladores.</h3>
-        <div class="row">
-          <div v-for="(card, index) in data" v-bind:key="index" class="card">
-            <div class="card__title">
-              <strong>
-                <a :href="card.url" target="_blank">{{card.title}}</a>
-              </strong>
-              <img src="./../assets/img/arrow-circle-right-solid.svg" width="18px">
-            </div>
-            <div class="card__content">
-              <p>{{card.description}}</p>
-            </div>
-            <div class="card__footer">
-              <span class="label" v-for="label in card.labels" v-bind:key="label.id">
-                <img :src="getIcon(label)" height="15px">
-                {{label}}
-              </span>
-            </div>
+    </header>
+    <scrollactive class="menu" active-class="active" :offset="70">
+      <a href="#home" class="scrollactive-item">Home</a>
+      <a href="#designs" class="scrollactive-item">Mis diseños</a>
+      <a href="#jobs" class="scrollactive-item">Mis trabajos</a>
+      <a href="#contact" class="scrollactive-item">Contacto</a>
+    </scrollactive>
+    <div id="designs">
+      <h3
+        class="subtitle"
+      >Estos son unos diseños que he creado para inspiración o utilidad de otros desarrolladores.</h3>
+      <div class="row">
+        <div v-for="(card, index) in data.posts" v-bind:key="index" class="card">
+          <div class="card__title">
+            <strong>
+              <a :href="card.url" target="_blank">{{card.title}}</a>
+            </strong>
+            <img src="./../assets/img/arrow-circle-right-solid.svg" width="18px">
+          </div>
+          <div class="card__content">
+            <p>{{card.description}}</p>
+          </div>
+          <div class="card__footer">
+            <span class="label" v-for="label in card.labels" v-bind:key="label.id">
+              <img :src="getIcon(label)" height="15px">
+              {{label}}
+            </span>
           </div>
         </div>
       </div>
+    </div>
 
-      <div>
-        <h3>Estos son parte de los proyectos en los que he trabajado.</h3>
-        <div class="row">
-          <div v-for="(card, index) in data" v-bind:key="index" class="card">
-            <div class="card__title">
-              <strong>
-                <a :href="card.url" target="_blank">{{card.title}}</a>
-              </strong>
+    <div class="jobs" id="jobs">
+      <h3 class="subtitle">Estos son parte de los proyectos en los que he trabajado.</h3>
+      <div class="row">
+        <div v-for="(card, index) in data.jobs" v-bind:key="index" class="card">
+          <div class="card__title">
+            <strong>
+              <a :href="card.url" target="_blank">{{card.title}}</a>
+            </strong>
+            <a :href="card.url" target="_blank">
               <img src="./../assets/img/arrow-circle-right-solid.svg" width="18px">
-            </div>
-            <div class="card__content">
-              <p>{{card.description}}</p>
-            </div>
-            <div class="card__footer">
-              <span class="label" v-for="label in card.labels" v-bind:key="label.id">
-                <img :src="getIcon(label)" height="15px">
-                {{label}}
-              </span>
-            </div>
+            </a>
+          </div>
+          <div class="card__content">
+            <p>{{card.description}}</p>
+          </div>
+          <div class="card__footer">
+            <span class="label" v-for="label in card.labels" v-bind:key="label.id">
+              <img :src="getIcon(label)" height="15px">
+              {{label}}
+            </span>
           </div>
         </div>
       </div>
+    </div>
 
-      <div>
-        <h3>¿Quieres saludarme o seguirme en mis redes?, aquí te las dejo.</h3>
-        <div class="row">
-          <div v-for="(card, index) in data" v-bind:key="index" class="card">
-            <div class="card__title">
-              <strong>
-                <a :href="card.url" target="_blank">{{card.title}}</a>
-              </strong>
-              <img src="./../assets/img/arrow-circle-right-solid.svg" width="18px">
-            </div>
-            <div class="card__content">
-              <p>{{card.description}}</p>
-            </div>
-            <div class="card__footer">
-              <span class="label" v-for="label in card.labels" v-bind:key="label.id">
-                <img :src="getIcon(label)" height="15px">
-                {{label}}
-              </span>
-            </div>
-          </div>
-        </div>
+    <div class="contact" id="contact">
+      <h3>¿Quieres saludarme o seguirme en mis redes?
+        <br>aquí te las dejo.
+      </h3>
+      <div class="icons">
+        <li class="list-inline-item">
+          <a href="https://github.com/krrskl" target="_blank">
+            <span>
+              <i class="fab fa-github"></i>
+            </span>
+          </a>
+        </li>
+
+        <li class="list-inline-item">
+          <a href="https://gitlab.com/krrskl97" target="_blank">
+            <span>
+              <i class="fab fa-gitlab"></i>
+            </span>
+          </a>
+        </li>
+
+        <li class="list-inline-item">
+          <a href="https://twitter.com/krrskl_" target="_blank">
+            <span>
+              <i class="fab fa-twitter"></i>
+            </span>
+          </a>
+        </li>
+
+        <li class="list-inline-item">
+          <a href="https://www.facebook.com/krrskl" target="_blank">
+            <span>
+              <i class="fab fa-facebook-f"></i>
+            </span>
+          </a>
+        </li>
+
+        <li class="list-inline-item">
+          <a href="https://www.instagram.com/krrskl_" target="_blank">
+            <span>
+              <i class="fab fa-instagram"></i>
+            </span>
+          </a>
+        </li>
+
+        <li class="list-inline-item">
+          <a href="mailto:krrskl97@gmail.com" target="_blank">
+            <span>
+              <i class="fab fa-envelope-o"></i>
+            </span>
+          </a>
+        </li>
       </div>
+      <div class="parallax_contact"></div>
     </div>
 
     <div class="working" id="element">
@@ -138,7 +160,7 @@ export default {
     };
   },
   mounted() {
-    console.log(this.data);
+    // console.log(this.data);
   },
   methods: {
     getIcon(name) {
@@ -146,15 +168,17 @@ export default {
         name.toLowerCase() +
         ".svg");
     },
+    getImage(name) {
+      return require(`./../assets/img/${name}`);
+    },
     handleScroll: function(event) {
-      if (document.getElementsByTagName("ul")[0].offsetTop <= scrollY)
-        this.moveNav = true;
-      else this.moveNav = false;
-
-      if (
+      /* if (scrollY >= document.getElementsByTagName("ul")[0].offsetTop)
+        return this.moveNav = !this.moveNav;
+      else */ if (
         document.getElementsByClassName("text_index")[0].clientHeight >= scrollY
       )
-        this.moveNav = false;
+        return (this.moveNav = false);
+      return (this.moveNav = true);
     }
   },
   created: function() {
@@ -167,16 +191,111 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navTop {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  width: auto;
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  flex-direction: column;
+  animation: pulse 5s infinite ease;
+  clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+  margin-bottom: -6rem;
+  margin-top: 3rem;
+  padding: 1rem;
+  text-align: center;
+  h3 {
+    color: var(--text-primary);
+    z-index: 2;
+  }
+  position: relative;
+  .icons {
+    display: flex;
+    z-index: 2;
+    margin-bottom: 3rem;
+    li {
+      list-style: none;
+      margin-right: 2rem;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        text-decoration: none;
+        font-size: 2em;
+        color: var(--text-primary);
+        &:hover {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+  .parallax_contact {
+    background-image: url("./../assets/img/undraw_contact_us_15o2.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
 }
-.home > h3 {
+
+@keyframes pulse {
+  0% {
+    background-color: rgba(29, 33, 33, 0.95);
+  }
+
+  50.0% {
+    background-color: rgba(29, 33, 33, 0.7);
+  }
+
+  50.5% {
+    background-color: rgba(29, 33, 33, 0.95);
+  }
+
+  51.0% {
+    background-color: rgba(29, 33, 33, 0.5);
+  }
+
+  51.5% {
+    background-color: rgba(29, 33, 33, 0.9);
+  }
+
+  52.0% {
+    background-color: rgba(29, 33, 33, 0.7);
+  }
+
+  90.5% {
+    background-color: rgba(29, 33, 33, 0.85);
+  }
+
+  91.0% {
+    background-color: rgba(29, 33, 33, 0.65);
+  }
+
+  91.5% {
+    background-color: rgba(29, 33, 33, 0.85);
+  }
+
+  100.0% {
+    background-color: rgba(29, 33, 33, 0.95);
+  }
+}
+.navTop {
+  position: sticky !important;
+  position: -webkit-sticky !important;
+  top: 0 !important;
+  width: auto !important;
+}
+.subtitle {
   margin: 0 1.5rem;
   border-left: 3px solid #104dbf;
   padding-left: 0.5rem;
+  margin-top: 5rem;
 }
 .card {
   &:hover,
@@ -236,7 +355,7 @@ export default {
       transition: all 1s ease;
     }
     * {
-      z-index: 1;
+      z-index: 5;
     }
     a {
       text-decoration: none;
@@ -302,7 +421,7 @@ export default {
   }
 }
 .working {
-  clip-path: polygon(0 25%, 100% 0, 100% 70%, 0 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
   background-image: linear-gradient(90deg, var(--primary) 0, var(--secondary));
   height: 80vh;
   display: flex;
@@ -310,7 +429,6 @@ export default {
   align-items: center;
   flex-direction: column;
   color: var(--text-primary);
-  margin-bottom: 10rem;
   img {
     height: 200px;
   }
@@ -349,35 +467,33 @@ header,
     animation: shine 1s infinite;
   }
 }
-ul {
+.menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  /* position: -webkit-sticky; */
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  position: sticky;
+  position: -webkit-sticky;
   z-index: 100;
-  transition: all 10s ease;
+  top: 0;
+  /*   li {
+    float: left;
+    cursor: pointer; */
+  a {
+    display: block;
+    color: var(--text-primary);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+  }
+  // }
 }
 
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: var(--text-primary);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
+/* li a:hover {
   opacity: 0.2;
-}
+} */
 
 .active {
   background-color: #f44336;
@@ -402,13 +518,13 @@ li a:hover {
 }
 
 @media screen and (max-width: 425px) {
-  li a {
+  .menu li a {
     padding: 14px 10px !important;
   }
   header,
   .text_index,
   #particles-js {
-    height: 93vh !important;
+    height: 84vh !important;
   }
   .row {
     grid-auto-columns: calc(100vw - 3rem) !important;
@@ -416,6 +532,9 @@ li a:hover {
   }
   .card {
     height: 200px !important;
+  }
+  .working {
+    clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 100%);
   }
 }
 

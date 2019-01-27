@@ -136,10 +136,11 @@ body {
 footer {
   background-image: linear-gradient(90deg, var(--primary) 0, var(--secondary));
   margin: 0;
-  height: 150px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid var(--text-primary);
   div {
     font-family: "Dosis";
     font-weight: bold;

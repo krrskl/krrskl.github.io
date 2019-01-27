@@ -2,4 +2,4 @@ const posts = {
   data: null
 };
 
-module.exports = { posts: posts };
+module.exports = posts;
