@@ -32,7 +32,7 @@
       </div>
     </header>
     <scrollactive class="menu" active-class="active" :offset="70">
-      <a href="#home" class="scrollactive-item">Home</a>
+      <a href="#home" class="scrollactive-item">Inicio</a>
       <a href="#designs" class="scrollactive-item">Mis diseños</a>
       <a href="#jobs" class="scrollactive-item">Mis trabajos</a>
       <a href="#contact" class="scrollactive-item">Contacto</a>
