@@ -41,14 +41,24 @@
 
           <p class="text-left">
             📙 Estudio Ingeniería de Sistemas y me desempeño desarrollando
-            <br />aplicaciones para Android, iOS, y web.
+            <br />aplicaciones para 🤖 Android, 🍏 iOS, y 🖥️ web.
           </p>
+
+          <codersrank-widget
+            username="krrskl"
+            style="--header-bg-color: #104dbf; width: 60%"
+          ></codersrank-widget>
         </div>
-        <img src="./../assets/img/undraw_programming_2svr.svg" height="300px" />
+        <img
+          src="./../assets/img/undraw_developer_activity.svg"
+          height="300px"
+        />
       </div>
     </header>
 
     <div id="designs">
+      <br /><br />
+      <h1 class="title">Diseños</h1>
       <h3 class="subtitle">
         Estos son unos diseños que he creado para inspiración o utilidad de
         otros desarrolladores.
@@ -86,6 +96,8 @@
     </div>
 
     <div class="jobs" id="jobs">
+      <br /><br />
+      <h1 class="title">Mis trabajos</h1>
       <h3 class="subtitle">
         Estos son parte de los proyectos en los que he trabajado.
       </h3>
@@ -136,6 +148,17 @@
           <a href="https://gitlab.com/krrskl" target="_blank">
             <span>
               <i class="fab fa-gitlab"></i>
+            </span>
+          </a>
+        </li>
+
+        <li class="list-inline-item">
+          <a
+            href="https://stackoverflow.com/users/8599849/krrskl"
+            target="_blank"
+          >
+            <span>
+              <i class="fab fa-stack-overflow"></i>
             </span>
           </a>
         </li>
@@ -360,11 +383,15 @@ export default {
   }
 }
 
+.title,
 .subtitle {
   margin: 0 1.5rem;
   border-left: 3px solid #104dbf;
   padding-left: 0.5rem;
-  margin-top: 5rem;
+}
+
+.title {
+  margin-top: 2rem;
 }
 
 .card {
@@ -393,11 +420,12 @@ export default {
   }
   padding: 3px 0.5rem;
   position: relative;
-  background-color: var(--secondary);
+  background-color: var(--white);
   width: calc(100% - 1rem);
   height: 200px;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0px 3px 6px #3333333d;
   &:before {
     content: "";
     background: #f34636;
@@ -414,7 +442,7 @@ export default {
   .card__title {
     text-align: center;
     padding: 0.5rem;
-    color: var(--text-primary);
+    color: var(--text-dark);
     font-weight: bold;
     border-bottom: 0.5px solid;
     display: flex;
@@ -429,12 +457,12 @@ export default {
     }
     a {
       text-decoration: none;
-      color: var(--text-primary);
+      color: var(--text-dark);
     }
   }
   .card__content {
     padding: 0.5rem;
-    color: var(--text-primary);
+    color: var(--text-dark);
     z-index: 1;
     position: absolute;
     top: 0;
@@ -543,6 +571,9 @@ h1 {
   }
   .text-welcome {
     margin-right: 2rem;
+    p {
+      font-size: x-large;
+    }
   }
 }
 
@@ -595,8 +626,8 @@ h1 {
   height: auto;
   display: grid;
   grid-template-areas: "a a a a";
-  grid-gap: 5px;
-  grid-auto-columns: calc(((100vw - 3rem) - 20px) / 4);
+  grid-gap: 20px;
+  grid-auto-columns: calc(((100vw - 3rem) - 60px) / 4);
   width: calc(100vw - 3rem);
   margin: 0 auto;
   margin-top: 1rem;

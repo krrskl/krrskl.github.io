@@ -6,10 +6,11 @@
         Hecho con
         <span class="heart">&#9829;</span> por
         <a
-          href="https://www.gitlab.com/krrskl97"
-          title="front end developer"
+          href="https://www.github.com/krrskl"
+          title="Front end developer"
           target="_blank"
-        >Rubén Carrascal</a>
+          >Rubén Carrascal</a
+        >
       </div>
     </footer>
     <a href id="rocketmeluncur" class="showrocket">
@@ -22,14 +23,14 @@
 export default {
   name: "app",
   methods: {
-    handleScroll(event) {}
+    handleScroll(event) {},
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
-  }
+  },
 };
 </script>
 
@@ -59,9 +60,11 @@ body {
 }
 :root {
   --text-primary: #fff;
+  --text-dark: #333;
   --primary: #4d84f4;
   --secondary: #003fbf;
   --terceary: #00308f;
+  --white: #ffffff;
   --gray: #f0f0f0;
 }
 * {

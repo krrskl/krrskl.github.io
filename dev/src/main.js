@@ -22,5 +22,5 @@ new Vue({
 
 console.log(
   `%c Bienvenidos a mi portafolio, no pegues código aquí.`,
-  "font-size: 2em; color: #000; font-weight: bold"
+  "font-size: 1.5em; color: #000; font-weight: bold"
 );
