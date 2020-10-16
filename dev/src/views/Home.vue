@@ -1,5 +1,17 @@
 <template>
   <div class="home">
+    <scrollactive class="menu" active-class="active" :offset="70">
+      <div class="name">
+        <a href="#home"> Rubén Carrascal </a>
+      </div>
+      <div class="links">
+        <a href="#home" class="scrollactive-item">Inicio</a>
+        <a href="#designs" class="scrollactive-item">Mis diseños</a>
+        <a href="#jobs" class="scrollactive-item">Mis trabajos</a>
+        <a href="#contact" class="scrollactive-item">Contacto</a>
+      </div>
+    </scrollactive>
+
     <header id="home">
       <vue-particles
         color="#dedede"
@@ -20,42 +32,53 @@
       ></vue-particles>
 
       <div class="text_index">
-        <h3>
-          Hola soy
-          <strong>Rubén Carrascal</strong>, bienvenido a mi página personal.
-        </h3>
+        <div class="text-welcome">
+          <h1 class="text-left">
+            Hola, <br />
+            soy
+            <strong>Rubén Carrascal</strong>
+          </h1>
 
-        <p>Estudio Ingeniería de Sistemas y me desempeño desarrollando
-          <br>aplicaciones para Android, iOS, y web.
-        </p>
-        <img src="./../assets/img/undraw_programming_2svr.svg" height="150px">
+          <p class="text-left">
+            📙 Estudio Ingeniería de Sistemas y me desempeño desarrollando
+            <br />aplicaciones para Android, iOS, y web.
+          </p>
+        </div>
+        <img src="./../assets/img/undraw_programming_2svr.svg" height="300px" />
       </div>
     </header>
-    <scrollactive class="menu" active-class="active" :offset="70">
-      <a href="#home" class="scrollactive-item">Inicio</a>
-      <a href="#designs" class="scrollactive-item">Mis diseños</a>
-      <a href="#jobs" class="scrollactive-item">Mis trabajos</a>
-      <a href="#contact" class="scrollactive-item">Contacto</a>
-    </scrollactive>
+
     <div id="designs">
-      <h3
-        class="subtitle"
-      >Estos son unos diseños que he creado para inspiración o utilidad de otros desarrolladores.</h3>
+      <h3 class="subtitle">
+        Estos son unos diseños que he creado para inspiración o utilidad de
+        otros desarrolladores.
+      </h3>
       <div class="row">
-        <div v-for="(card, index) in data.posts" v-bind:key="index" class="card">
+        <div
+          v-for="(card, index) in data.posts"
+          v-bind:key="index"
+          class="card"
+        >
           <div class="card__title">
             <strong>
-              <a :href="card.url" target="_blank">{{card.title}}</a>
+              <a :href="card.url" target="_blank">{{ card.title }}</a>
             </strong>
-            <img src="./../assets/img/arrow-circle-right-solid.svg" width="18px">
+            <img
+              src="./../assets/img/arrow-circle-right-solid.svg"
+              width="18px"
+            />
           </div>
           <div class="card__content">
-            <p>{{card.description}}</p>
+            <p>{{ card.description }}</p>
           </div>
           <div class="card__footer">
-            <span class="label" v-for="label in card.labels" v-bind:key="label.id">
-              <img :src="getIcon(label)" height="15px">
-              {{label}}
+            <span
+              class="label"
+              v-for="label in card.labels"
+              v-bind:key="label.id"
+            >
+              <img :src="getIcon(label)" height="15px" />
+              {{ label }}
             </span>
           </div>
         </div>
@@ -63,24 +86,33 @@
     </div>
 
     <div class="jobs" id="jobs">
-      <h3 class="subtitle">Estos son parte de los proyectos en los que he trabajado.</h3>
+      <h3 class="subtitle">
+        Estos son parte de los proyectos en los que he trabajado.
+      </h3>
       <div class="row">
         <div v-for="(card, index) in data.jobs" v-bind:key="index" class="card">
           <div class="card__title">
             <strong>
-              <a :href="card.url" target="_blank">{{card.title}}</a>
+              <a :href="card.url" target="_blank">{{ card.title }}</a>
             </strong>
             <a :href="card.url" target="_blank">
-              <img src="./../assets/img/arrow-circle-right-solid.svg" width="18px">
+              <img
+                src="./../assets/img/arrow-circle-right-solid.svg"
+                width="18px"
+              />
             </a>
           </div>
           <div class="card__content">
-            <p>{{card.description}}</p>
+            <p>{{ card.description }}</p>
           </div>
           <div class="card__footer">
-            <span class="label" v-for="label in card.labels" v-bind:key="label.id">
-              <img :src="getIcon(label)" height="15px">
-              {{label}}
+            <span
+              class="label"
+              v-for="label in card.labels"
+              v-bind:key="label.id"
+            >
+              <img :src="getIcon(label)" height="15px" />
+              {{ label }}
             </span>
           </div>
         </div>
@@ -88,9 +120,9 @@
     </div>
 
     <div class="contact" id="contact">
-      <h3>¿Quieres saludarme o seguirme en mis redes?
-        <br>aquí te las dejo.
-      </h3>
+      <h2>
+        ¿Quieres saludarme o seguirme en mis redes? <br />aquí te las dejo.
+      </h2>
       <div class="icons">
         <li class="list-inline-item">
           <a href="https://github.com/krrskl" target="_blank">
@@ -101,7 +133,7 @@
         </li>
 
         <li class="list-inline-item">
-          <a href="https://gitlab.com/krrskl97" target="_blank">
+          <a href="https://gitlab.com/krrskl" target="_blank">
             <span>
               <i class="fab fa-gitlab"></i>
             </span>
@@ -109,9 +141,25 @@
         </li>
 
         <li class="list-inline-item">
-          <a href="https://twitter.com/krrskl_" target="_blank">
+          <a href="https://www.linkedin.com/in/krrskl" target="_blank">
             <span>
-              <i class="fab fa-twitter"></i>
+              <i class="fab fa-linkedin"></i>
+            </span>
+          </a>
+        </li>
+
+        <li class="list-inline-item">
+          <a href="https://dribbble.com/krrskl" target="_blank">
+            <span>
+              <i class="fab fa-dribbble"></i>
+            </span>
+          </a>
+        </li>
+
+        <li class="list-inline-item">
+          <a href="mailto:krrskl97@gmail.com" target="_blank">
+            <span>
+              <i class="fas fa-envelope"></i>
             </span>
           </a>
         </li>
@@ -125,26 +173,40 @@
         </li>
 
         <li class="list-inline-item">
-          <a href="https://www.instagram.com/krrskl_" target="_blank">
+          <a href="https://twitter.com/krrskl_dev" target="_blank">
             <span>
-              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
             </span>
           </a>
         </li>
 
         <li class="list-inline-item">
-          <a href="mailto:krrskl97@gmail.com" target="_blank">
+          <a href="https://www.instagram.com/krrskl.dev" target="_blank">
             <span>
-              <i class="fab fa-envelope-o"></i>
+              <i class="fab fa-instagram"></i>
             </span>
           </a>
         </li>
+      </div>
+
+      <br />
+
+      <div class="recruiter">
+        <h2>
+          ¿Eres reclutador IT?
+          <br />
+          descarga mi curriculum vitae aquí:
+        </h2>
+
+        <div class="">
+          <a href="https://bit.ly/curriculum-RC" target="_blank">Descargar</a>
+        </div>
       </div>
       <div class="parallax_contact"></div>
     </div>
 
     <div class="working" id="element">
-      <img src="./../assets/img/undraw_monitor_iqpq.svg">
+      <img src="./../assets/img/undraw_monitor_iqpq.svg" />
       <h3>Aún sigo construyendo mi sitio...</h3>
     </div>
   </div>
@@ -156,12 +218,10 @@ export default {
   data() {
     return {
       data: require("@/data/posts.json"),
-      moveNav: false
+      moveNav: false,
     };
   },
-  mounted() {
-    // console.log(this.data);
-  },
+  mounted() {},
   methods: {
     getIcon(name) {
       return require("./../assets/icons/file_type_" +
@@ -171,22 +231,20 @@ export default {
     getImage(name) {
       return require(`./../assets/img/${name}`);
     },
-    handleScroll: function(event) {
-      /* if (scrollY >= document.getElementsByTagName("ul")[0].offsetTop)
-        return this.moveNav = !this.moveNav;
-      else */ if (
+    handleScroll: function (event) {
+      if (
         document.getElementsByClassName("text_index")[0].clientHeight >= scrollY
       )
         return (this.moveNav = false);
       return (this.moveNav = true);
-    }
+    },
   },
-  created: function() {
+  created() {
     window.addEventListener("scroll", this.handleScroll);
   },
-  destroyed: function() {
+  destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
-  }
+  },
 };
 </script>
 
@@ -195,15 +253,16 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 500px;
   flex-direction: column;
   animation: pulse 5s infinite ease;
-  clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
   margin-bottom: -6rem;
   margin-top: 3rem;
   padding: 1rem;
   text-align: center;
-  h3 {
+  h3,
+  h2 {
     color: var(--text-primary);
     z-index: 2;
   }
@@ -211,10 +270,9 @@ export default {
   .icons {
     display: flex;
     z-index: 2;
-    margin-bottom: 3rem;
     li {
       list-style: none;
-      margin-right: 2rem;
+      margin-right: 2.5rem;
       &:last-child {
         margin-right: 0;
       }
@@ -226,6 +284,18 @@ export default {
           opacity: 0.3;
         }
       }
+    }
+  }
+  .recruiter {
+    margin-bottom: 5rem;
+    z-index: 2;
+    a {
+      padding: 0.7rem 3rem;
+      background: red;
+      text-decoration: none;
+      color: var(--text-primary);
+      border-radius: 25px;
+      cursor: pointer;
     }
   }
   .parallax_contact {
@@ -242,6 +312,10 @@ export default {
     width: 100%;
     height: 100%;
   }
+}
+
+.text-left {
+  text-align: left;
 }
 
 @keyframes pulse {
@@ -285,18 +359,14 @@ export default {
     background-color: rgba(29, 33, 33, 0.95);
   }
 }
-.navTop {
-  position: sticky !important;
-  position: -webkit-sticky !important;
-  top: 0 !important;
-  width: auto !important;
-}
+
 .subtitle {
   margin: 0 1.5rem;
   border-left: 3px solid #104dbf;
   padding-left: 0.5rem;
   margin-top: 5rem;
 }
+
 .card {
   &:hover,
   &:focus {
@@ -411,6 +481,7 @@ export default {
     transform: rotateZ(-35deg);
   }
 }
+
 @keyframes shine {
   from {
     -webkit-mask-position: 150%;
@@ -420,8 +491,9 @@ export default {
     -webkit-mask-position: -50%;
   }
 }
+
 .working {
-  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 100%);
   background-image: linear-gradient(90deg, var(--primary) 0, var(--secondary));
   height: 80vh;
   display: flex;
@@ -433,25 +505,28 @@ export default {
     height: 200px;
   }
 }
+
 header {
   background-image: linear-gradient(90deg, var(--primary) 0, var(--secondary));
   color: var(--text-primary);
 }
-header p {
-  margin-bottom: 7rem;
-}
+
 header,
 .text_index,
 #particles-js {
-  height: 92vh;
+  height: calc(100vh - 70px);
 }
+
+h1 {
+  font-size: xxx-large;
+}
+
 .text_index {
   position: absolute;
   top: 0;
   left: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   width: calc(100% - 6rem);
   padding: 0 3rem;
@@ -466,38 +541,56 @@ header,
     mask-size: 300%;
     animation: shine 1s infinite;
   }
+  .text-welcome {
+    margin-right: 2rem;
+  }
 }
+
 .menu {
+  position: sticky;
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  position: sticky;
-  position: -webkit-sticky;
   z-index: 100;
   top: 0;
-  /*   li {
-    float: left;
-    cursor: pointer; */
-  a {
-    display: block;
-    color: var(--text-primary);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    float: left;
+  height: 70px;
+  .name {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      font-size: xx-large;
+      padding: 0;
+      height: auto;
+    }
   }
-  // }
+  .links {
+    width: calc(70% - 7rem);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 7rem;
+  }
+  a {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    height: 30px;
+    border-radius: 25px;
+    line-height: 30px;
+    font-size: larger;
+  }
 }
-
-/* li a:hover {
-  opacity: 0.2;
-} */
 
 .active {
   background-color: #f44336;
 }
+
 .row {
   height: auto;
   display: grid;
@@ -509,23 +602,11 @@ header,
   margin-top: 1rem;
 }
 
-@media screen and (min-width: 1024px) {
-  header,
-  .text_index,
-  #particles-js {
-    height: 93vh;
-  }
-}
-
 @media screen and (max-width: 425px) {
   .menu li a {
     padding: 14px 10px !important;
   }
-  header,
-  .text_index,
-  #particles-js {
-    height: 84vh !important;
-  }
+
   .row {
     grid-auto-columns: calc(100vw - 3rem) !important;
     grid-template-areas: "a";
@@ -555,6 +636,7 @@ header,
     height: 100%;
   }
 }
+
 @keyframes no-hover-v {
   0% {
     transform: scaleX(1.05);
