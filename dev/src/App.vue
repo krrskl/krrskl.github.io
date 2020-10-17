@@ -61,9 +61,9 @@ body {
 :root {
   --text-primary: #fff;
   --text-dark: #333;
-  --primary: #4d84f4;
-  --secondary: #003fbf;
-  --terceary: #00308f;
+  --primary: #4481eb;
+  --secondary: #04befe;
+  --terceary: #104dbf;
   --white: #ffffff;
   --gray: #f0f0f0;
 }

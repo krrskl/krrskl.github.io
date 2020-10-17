@@ -4,10 +4,10 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import VueParticles from "vue-particles";
-// import Scrollspy from 'vue2-scrollspy';
 import VueScrollactive from "vue-scrollactive";
 
-// Vue.use(Scrollspy);
+import "./assets/scss/app.scss";
+
 Vue.use(VueParticles);
 Vue.use(VueScrollactive);
 Vue.config.productionTip = false;
