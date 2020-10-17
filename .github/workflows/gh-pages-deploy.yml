@@ -5,15 +5,16 @@ on:
       - master
 jobs:
   gh-pages-deploy:
-    name: Deploying to Github pages
+    name: 🚀 Deploying to Github pages
     runs-on: ubuntu-latest
     steps:
       - name: 🔧 Setup Node.js for use with actions
-        uses: actions/setup-node@v1.1.0
+        uses: actions/setup-node@v2
         with:
-          version: 10.x
+          node-version: "10.x"
+          check-latest: false
 
-      - name: 🔀 Checkout branch
+      - name: 🔀 Checkout the repository
         uses: actions/checkout@v2
 
       - name: 📦 Clean dependencies
