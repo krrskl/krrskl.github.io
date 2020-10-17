@@ -1,0 +1,91 @@
+{
+  "posts": [
+    {
+      "title": "Pre-carga de elementos.",
+      "url": "https://stackblitz.com/edit/preview-load-elements",
+      "description": "He creado este diseño que podrás usar para mostrarlas al usuario mientras tu servidor responde.",
+      "labels": ["Ionic", "Angular", "Css"]
+    },
+    {
+      "title": "Vista única de cuestionario.",
+      "url": "https://stackblitz.com/edit/test-page",
+      "description": "Diseño de vista única tipo  cuestionario.",
+      "labels": ["Ionic", "Angular", "Css"]
+    },
+    {
+      "title": "Cards sociales.",
+      "url": "https://stackblitz.com/edit/social-cards-ionic",
+      "description": "Diseño de cards estilo social.",
+      "labels": ["Ionic", "Angular", "Css"]
+    },
+    {
+      "title": "Botones sociales.",
+      "url": "https://codepen.io/krrskl/pen/gjdzyp",
+      "description": "Diseño de unos botones sociales.",
+      "labels": ["Css"]
+    },
+    {
+      "title": "Firma de correo.",
+      "url": "https://codepen.io/krrskl/pen/KBbevg",
+      "description": "Creando mi firma para Gmail.",
+      "labels": ["Css"]
+    },
+    {
+      "title": "Indicador de scroll",
+      "url": "https://gitlab.com/krrskl97/scroll-indicator",
+      "description": "Cómo crear un indicador de scroll usando JavaScript + Sass.",
+      "labels": ["Sass", "JavaScript"]
+    }
+  ],
+  "jobs": [
+    {
+      "title": "Mis cuentas app",
+      "url": "https://play.google.com/store/apps/details?id=com.noemec.myaccounts",
+      "description": "Mis cuentas es la primera app que te permite tener el control de tu dinero, deudores y gastos, todo en una sola app.",
+      "image": "",
+      "labels": ["Firebase", "Ionic", "TypeScript", "Sass"]
+    },
+    {
+      "title": "Creator studio live",
+      "url": "http://creatorstudiolive.com/",
+      "description": "Desarrollo de una network CPC, para personas que trabajan con fan pages de Facebook y quieran monetizar sus videos transmisiones en vivo.",
+      "image": "",
+      "labels": ["Laravel", "Angular", "TypeScript", "Sass"]
+    },
+    {
+      "title": "Contextos",
+      "url": "http://tienda.contextos.co",
+      "description": "Tienda de alquiler de libros, desarrollada para Aluna Studios.",
+      "image": "contextos.png",
+      "labels": ["Php", "Vue", "JavaScript", "Sass"]
+    },
+    {
+      "title": "AppsLowCost",
+      "url": "https://appslowcost.net/",
+      "description": "Plataforma de cursos dedicada a la enseñanza del desarrollo de apps.",
+      "image": "contextos.png",
+      "labels": ["Php", "Vue", "JavaScript", "Sass"]
+    },
+    {
+      "title": "Fiapp",
+      "url": "https://play.google.com/store/apps/details?id=com.corporacioninnlab.rdcr.fiapp",
+      "description": "Aplicación que te permite solicitar préstamo sin salir de casa y usarlo en tu tienda más cercana, desarrollada para Innlab",
+      "image": "",
+      "labels": ["Ionic", "TypeScript", "Sass"]
+    },
+    {
+      "title": "Lector QR",
+      "url": "https://play.google.com/store/apps/details?id=com.rdcr.lectorqr",
+      "description": "Aplicación que te permite leer, crear y almacenar códigos de barra y QR",
+      "image": "",
+      "labels": ["Ionic", "TypeScript", "Sass"]
+    }
+  ],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=W4Qv5tpDahA&list=PLrS0r5cHUhTCoi37TzTkSU2XsqH_vYKKX",
+      "image": "https://i.ytimg.com/vi/lUiIddxC4KM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDYVGhIVEzmnfHFB9n-QmD3mmVkUw",
+      "labels": ["Ionic", "TypeScript"]
+    }
+  ]
+}
