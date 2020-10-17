@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🔧 Setup Node.js for use with actions
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v1.1.0
         with:
           node-version: "10.x"
           check-latest: false
