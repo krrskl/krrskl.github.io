@@ -22,5 +22,5 @@ jobs:
 
       - name: 🚀 Run deploy script
         run: |
-          git config user.name "Rubén Carrascal" && git config user.email "krrskl97@gmail.com" 
+          git config user.name ${{ secrets.GH_NAME }} && git config user.email ${{ secrets.GH_EMAIL }}
           npm run github-deploy
