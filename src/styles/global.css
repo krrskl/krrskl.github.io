@@ -1,0 +1,142 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+@import 'tailwindcss';
+
+:root {
+	--primary-color: #1d1e30;
+	--secondary-color: #0a1647;
+	--tertiary-color: #133a94;
+
+	--white-color: #ffffff;
+	--green-color: #4daa57;
+	--accent-color: #f5a623;
+	--gray-color: #acacac;
+
+	--small-border-radius: 10px;
+
+	--card-bg: rgba(255, 255, 255, 0.05);
+	--card-image-bg: rgba(0, 0, 0, 0.2);
+}
+@font-face {
+	font-family: 'Atkinson';
+	src: url('/fonts/atkinson-regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Atkinson';
+	src: url('/fonts/atkinson-bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+body {
+	font-family: 'Atkinson', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: var(--secondary-color);
+	background-image:
+		radial-gradient(
+			ellipse at 10% 90%,
+			var(--secondary-color) 0%,
+			transparent 55%
+		),
+		radial-gradient(ellipse at 90% 90%, #141a3c 0%, transparent 55%),
+		radial-gradient(ellipse at 90% 10%, #0b3866 0%, transparent 55%),
+		radial-gradient(ellipse at 20% 10%, #133a94 0%, transparent 55%);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+/* main {
+	width: 70%;
+	max-width: calc(100% - 2em);
+	margin: auto;
+	padding: 3em 1em;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+h1 {
+	font-size: 3.052em;
+}
+h2 {
+	font-size: 2.441em;
+}
+h3 {
+	font-size: 1.953em;
+}
+h4 {
+	font-size: 1.563em;
+}
+h5 {
+	font-size: 1.25em;
+}
+strong,
+b {
+	font-weight: 700;
+}
+p {
+	margin-bottom: 1em;
+}
+.prose p {
+	margin-bottom: 2em;
+}
+textarea {
+	width: 100%;
+	font-size: 16px;
+}
+input {
+	font-size: 16px;
+}
+table {
+	width: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+code {
+	padding: 2px 5px;
+	background-color: rgb(var(--gray-color));
+	border-radius: 2px;
+}
+pre {
+	padding: 1.5em;
+	border-radius: 8px;
+}
+pre > code {
+	all: unset;
+}
+blockquote {
+	border-left: 4px solid var(--accent-color);
+	padding: 0 0 0 20px;
+	margin: 0px;
+	font-size: 1.333em;
+}
+hr {
+	border: none;
+	border-top: 1px solid rgb(var(--gray-color));
+}
+
+@media (max-width: 720px) {
+	body {
+		font-size: 18px;
+	}
+	main {
+		padding: 1em;
+	}
+}
