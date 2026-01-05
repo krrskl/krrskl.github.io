@@ -1,0 +1,307 @@
+---
+import { getExperiences } from "../../utils/profile";
+import ExperienceItem from "../ExperienceItem.astro";
+
+const experiences = getExperiences();
+const ITEMS_PER_PAGE = 4;
+const totalPages = Math.ceil(experiences.length / ITEMS_PER_PAGE);
+---
+
+<section class="experience-section my-4">
+	<div class="section-header">
+		<h2 class="section-title">Experiencia</h2>
+		<p class="section-subtitle">
+			Mi trayectoria profesional en el desarrollo de software y tecnología.
+		</p>
+
+		<div class="section-note">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="14"
+				height="14"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			>
+				<circle cx="12" cy="12" r="10"></circle>
+				<line x1="12" y1="16" x2="12" y2="12"></line>
+				<line x1="12" y1="8" x2="12.01" y2="8"></line>
+			</svg>
+			<span
+				>Los detalles de cada experiencia están disponibles en mi currículum</span
+			>
+		</div>
+	</div>
+
+	<div class="experience-container" data-items-per-page={ITEMS_PER_PAGE}>
+		<div class="experience-list">
+			{experiences.map((experience, index) => (
+				<div class="experience-page-item" data-index={index}>
+					<ExperienceItem experience={experience} />
+				</div>
+			))}
+		</div>
+	</div>
+
+	<div class="pagination-controls">
+		<button
+			class="pagination-btn prev-btn"
+			disabled
+			aria-label="Página anterior"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="20"
+				height="20"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			>
+				<polyline points="15 18 9 12 15 6"></polyline>
+			</svg>
+		</button>
+
+		<div class="pagination-dots">
+			{Array.from({ length: totalPages }, (_, i) => (
+				<button
+					class:list={["pagination-dot", { active: i === 0 }]}
+					data-page={i}
+					aria-label={`Ir a página ${i + 1}`}
+				/>
+			))}
+		</div>
+
+		<button class="pagination-btn next-btn" aria-label="Página siguiente">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="20"
+				height="20"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			>
+				<polyline points="9 18 15 12 9 6"></polyline>
+			</svg>
+		</button>
+	</div>
+
+	<div class="pagination-info">
+		<span class="current-page">1</span> /
+		<span class="total-pages">{totalPages}</span>
+	</div>
+</section>
+
+<script>
+const container = document.querySelector(
+	".experience-container",
+) as HTMLElement;
+const items = document.querySelectorAll(
+	".experience-page-item",
+) as NodeListOf<HTMLElement>;
+const prevBtn = document.querySelector(".prev-btn") as HTMLButtonElement;
+const nextBtn = document.querySelector(".next-btn") as HTMLButtonElement;
+const dots = document.querySelectorAll(
+	".pagination-dot",
+) as NodeListOf<HTMLButtonElement>;
+const currentPageSpan = document.querySelector(".current-page") as HTMLElement;
+
+const itemsPerPage = parseInt(container.dataset.itemsPerPage || "4", 10);
+const totalPages = Math.ceil(items.length / itemsPerPage);
+let currentPage = 0;
+
+function updateVisibility() {
+	const startIndex = currentPage * itemsPerPage;
+	const endIndex = Math.min(startIndex + itemsPerPage, items.length);
+
+	items.forEach((item, index) => {
+		// Remove last-visible class from all items
+		item.classList.remove("last-visible");
+
+		if (index >= startIndex && index < endIndex) {
+			item.style.display = "block";
+			item.style.opacity = "1";
+
+			// Mark the last visible item on this page
+			if (index === endIndex - 1) {
+				item.classList.add("last-visible");
+			}
+		} else {
+			item.style.display = "none";
+			item.style.opacity = "0";
+		}
+	});
+
+	prevBtn.disabled = currentPage === 0;
+	nextBtn.disabled = currentPage === totalPages - 1;
+
+	dots.forEach((dot, index) => {
+		dot.classList.toggle("active", index === currentPage);
+	});
+
+	currentPageSpan.textContent = String(currentPage + 1);
+}
+
+function goToPage(page: number) {
+	if (page >= 0 && page < totalPages) {
+		currentPage = page;
+		updateVisibility();
+	}
+}
+
+prevBtn.addEventListener("click", () => goToPage(currentPage - 1));
+nextBtn.addEventListener("click", () => goToPage(currentPage + 1));
+
+dots.forEach((dot) => {
+	dot.addEventListener("click", () => {
+		const page = parseInt(dot.dataset.page || "0", 10);
+		goToPage(page);
+	});
+});
+
+// Initialize
+updateVisibility();
+</script>
+
+<style is:global>
+/* Hide the timeline marker line for the last visible item on each page */
+.experience-page-item.last-visible .marker-line {
+	display: none !important;
+}
+</style>
+
+<style>
+.experience-section {
+	min-height: 50vh;
+}
+
+.section-header {
+	margin-bottom: 2rem;
+}
+
+.section-title {
+	font-weight: 700;
+	color: var(--text-primary, #fff);
+	margin: 0 0 0.5rem 0;
+}
+
+.section-subtitle {
+	color: var(--text-secondary, rgba(255, 255, 255, 0.6));
+	margin: 0;
+}
+
+.section-note {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 0.75rem;
+	padding: 0.5rem 0.875rem;
+	background: rgba(99, 102, 241, 0.1);
+	border: 1px solid rgba(99, 102, 241, 0.2);
+	border-radius: 8px;
+	font-size: 0.8rem;
+	color: var(--badge-color, #a5b4fc);
+}
+
+.experience-container {
+	min-height: 400px;
+}
+
+.experience-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.experience-page-item {
+	transition: opacity 0.3s ease;
+}
+
+.pagination-controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+.pagination-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid var(--border-color, rgba(255, 255, 255, 0.15));
+	background: var(--card-bg, rgba(255, 255, 255, 0.03));
+	color: var(--text-primary, #fff);
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+	background: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0.3);
+	transform: scale(1.05);
+}
+
+.pagination-btn:disabled {
+	opacity: 0.3;
+	cursor: not-allowed;
+}
+
+.pagination-dots {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.pagination-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: none;
+	background: var(--border-color, rgba(255, 255, 255, 0.2));
+	cursor: pointer;
+	transition: all 0.2s ease;
+	padding: 0;
+}
+
+.pagination-dot:hover {
+	background: rgba(255, 255, 255, 0.4);
+}
+
+.pagination-dot.active {
+	background: var(--green-color, #4daa57);
+	transform: scale(1.2);
+}
+
+.pagination-info {
+	text-align: center;
+	margin-top: 0.75rem;
+	color: var(--text-secondary, rgba(255, 255, 255, 0.5));
+	font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+	.experience-container {
+		min-height: 350px;
+	}
+
+	.pagination-btn {
+		width: 36px;
+		height: 36px;
+	}
+
+	.pagination-dot {
+		width: 8px;
+		height: 8px;
+	}
+}
+</style>

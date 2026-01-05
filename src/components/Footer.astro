@@ -1,0 +1,56 @@
+---
+import { getPersonalData } from "../utils/profile";
+
+const today = new Date();
+const personalData = getPersonalData();
+---
+
+<footer class="bg-secondary-color text-white py-12">
+	<div class="container mx-auto px-4">
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+			<div class="space-y-4">
+				<h3 class="text-xl font-bold italic">Rubén Carrascal (krrskl)</h3>
+				<p class="text-sm opacity-80">{personalData.title}</p>
+			</div>
+
+			<div class="space-y-4">
+				<h4 class="text-lg font-semibold">Enlaces Rápidos</h4>
+				<ul class="space-y-2">
+					<li>
+						<a href="#about" class="text-green-500 hover:underline">Sobre mí</a>
+					</li>
+					<li>
+						<a href="#services" class="text-green-500 hover:underline"
+							>Servicios</a
+						>
+					</li>
+					<li>
+						<a href="#projects" class="text-green-500 hover:underline"
+							>Proyectos</a
+						>
+					</li>
+					<li>
+						<a href="/blog" class="text-green-500 hover:underline">Blog</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="space-y-4">
+				<h4 class="text-lg font-semibold">Servicios</h4>
+				<ul class="space-y-2">
+					<li>Desarrollo Móvil</li>
+					<li>Desarrollo Web</li>
+					<li>Desarrollo Backend</li>
+					<li>Consultoría Técnica</li>
+					<li>Modelado de Bases de Datos</li>
+				</ul>
+			</div>
+		</div>
+
+		<div
+			class="mt-8 pt-8 border-t border-white/10 text-center text-sm opacity-80"
+		>
+			<p>&copy; {today.getFullYear()} Rubén Carrascal.</p>
+		</div>
+	</div>
+</footer>

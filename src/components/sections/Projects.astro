@@ -1,0 +1,150 @@
+---
+import { getProjects } from "../../utils/profile";
+import ProjectCard from "../ProjectCard.astro";
+
+const projects = getProjects();
+---
+
+<section class="projects-section my-4 min-h-[45vh]">
+	<div class="section-header">
+		<h2 class="section-title">Proyectos personales</h2>
+		<p class="section-subtitle">
+			Aplicaciones publicadas en <strong>App Store</strong> y
+			<strong>Google Play</strong>
+		</p>
+	</div>
+
+	<div class="carousel-wrapper">
+		<div class="carousel-track">
+			{projects.map((project) => <ProjectCard project={project} />)}
+			{projects.map((project) => <ProjectCard project={project} />)}
+		</div>
+	</div>
+
+	<div class="carousel-indicators">
+		<div class="scroll-hint">
+			<span class="hint-icon">&#8596;</span>
+			<span class="hint-text">Desliza para ver más</span>
+		</div>
+	</div>
+</section>
+
+<style>
+.projects-section {
+	overflow: hidden;
+}
+
+.section-header {
+	margin-bottom: 2.5rem;
+}
+
+.section-title {
+	font-weight: 700;
+	color: var(--text-primary, #fff);
+	margin: 0 0 0.5rem 0;
+}
+
+.section-subtitle {
+	color: var(--text-secondary, rgba(255, 255, 255, 0.6));
+	margin: 0;
+}
+
+.carousel-wrapper {
+	position: relative;
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	cursor: grab;
+	mask-image: linear-gradient(
+		to right,
+		transparent,
+		black 3%,
+		black 97%,
+		transparent
+	);
+	-webkit-mask-image: linear-gradient(
+		to right,
+		transparent,
+		black 3%,
+		black 97%,
+		transparent
+	);
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+	display: none;
+}
+
+.carousel-wrapper:active {
+	cursor: grabbing;
+}
+
+.carousel-track {
+	display: flex;
+	gap: 1.25rem;
+	padding: 1rem 2rem;
+	width: max-content;
+	animation: scroll 40s linear infinite;
+}
+
+.carousel-wrapper:hover .carousel-track,
+.carousel-wrapper:active .carousel-track {
+	animation-play-state: paused;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.carousel-indicators {
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.scroll-hint {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: var(--text-secondary, rgba(255, 255, 255, 0.5));
+	font-size: 0.85rem;
+}
+
+.hint-icon {
+	font-size: 1.2rem;
+	animation: bounce-x 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce-x {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(5px);
+	}
+}
+
+@media (max-width: 768px) {
+	.projects-section {
+		padding: 3rem 0;
+	}
+
+	.section-title {
+		font-size: 1.5rem;
+	}
+
+	.carousel-track {
+		gap: 1rem;
+		padding: 1rem;
+		animation-duration: 20s;
+	}
+}
+</style>
