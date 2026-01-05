@@ -1,0 +1,655 @@
+{
+	"uuid": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+	"personalData": {
+		"firstName": "Rubén",
+		"lastName": "Carrascal",
+		"title": "Ingeniero de Sistemas | Desarrollador Mobile & Full Stack",
+		"email": "krrskl97@gmail.com",
+		"phone": "+57 3045336862",
+		"linkedin": "https://linkedin.com/in/krrskl",
+		"portfolio": "https://appgallery.io/krrskl",
+		"resume": "Ingeniero de Sistemas y programador apasionado con más de 7 años de experiencia como desarrollador, especializado en aplicaciones móviles, web y de escritorio. Con habilidades en desarrollo Front-end y Back-end, y una sólida base en tecnologías Full Stack. Capacidad demostrada para liderar y entregar soluciones sólidas y centradas en el usuario.",
+		"location": {
+			"city": "Santa Marta",
+			"country": "Colombia"
+		},
+		"state": "Disponible para trabajar"
+	},
+	"experiences": [
+		{
+			"jobTitle": "Desarrollador Full Stack (Part time)",
+			"company": "Clipma AI LLC",
+			"location": "Remoto",
+			"startDate": "2025-09-01",
+			"endDate": "2026-01-02",
+			"description": [
+				"Desarrollé una plataforma para TV Azteca que permite crear una parrilla de programación de series, episodios, etc., publicar contenido y, a partir de este, permitir buscar o recomendar momentos de cada programa utilizando IA.",
+				"Cada momento está adaptado a las especificaciones de cada anunciante, permitiéndoles vender espacios publicitarios de manera más efectiva.",
+				"Implementé funcionalidades tanto en el frontend como en el backend para asegurar una experiencia de usuario fluida y eficiente.",
+				"Colaboré con un equipo multidisciplinario para integrar tecnologías de inteligencia artificial en la plataforma.",
+				"Aseguré la sincronización entre el sistema de gestión de contenido y la plataforma administrativa para una operación sin problemas.",
+				"Implementé un sistema de autenticación basado en roles para gestionar el acceso de diferentes tipos de usuarios.",
+				"Disené la arquitectura del sistema para el manejo de eventos internos y la comunicación entre servicios.",
+				"Disené un sistema de consolidación de notificaciones para mantener a los usuarios informados sobre actualizaciones y eventos importantes.",
+				"Configuré pipelines de CI/CD para automatizar el proceso de construcción y despliegue de la plataforma."
+			],
+			"technologiesUsed": [
+				"NodeJs",
+				"TypeScript",
+				"ReactJS",
+				"AWS",
+				"Google Cloud Platform",
+				"MongoDB",
+				"PostgreSQL",
+				"NextJS"
+			]
+		},
+		{
+			"jobTitle": "Mobile Developer (Freelance)",
+			"company": "Solutoday SAS",
+			"location": "Barranquilla, Atlántico, Colombia",
+			"startDate": "2025-03-01",
+			"endDate": "2025-12-27",
+			"description": [
+				"Añadí nuevas funcionalidades a 2 apps existentes utilizando Flutter y Dart para lograr hacer el primer lanzamiento en las tiendas de apps.",
+				"Modelé nuevas tablas que permitieran añadir nuevas funcionalidades sin afectar la integridad de los datos existentes.",
+				"Configuré pipelines de CI/CD con GitHub Actions para automatizar el proceso de construcción (Docker) y despliegue (AWS EC2) del servicio backend desarrollado en Laravel.",
+				"Añadí funcionalidades que permitieran a los administradores auditar el contenido generado por los usuarios para cumplir con los términos (EULA) requeridos por Apple.",
+				"Configuré los DNS y certificados para los dominios de la empresa.",
+				"Realicé la configuración y despliegue de un WordPress en el servicio de AWS Lightsail.",
+				"Distribución activa de apps en las tiendas (Play Store y App Store)."
+			],
+			"technologiesUsed": [
+				"Flutter",
+				"Dart",
+				"Docker",
+				"AWS",
+				"WordPress",
+				"Blade",
+				"Git",
+				"SDKs",
+				"iOS",
+				"Laravel",
+				"MySQL",
+				"PHP"
+			]
+		},
+		{
+			"jobTitle": "Mobile Developer (Freelance)",
+			"company": "Creator Studio Live SAS",
+			"location": "Medellín, Antioquia, Colombia",
+			"startDate": "2024-01-01",
+			"endDate": "2025-06-30",
+			"description": [
+				"Integración nativa con SDKs de redes de anuncios (Admob, Meta Audience Network e Unity Ads) y Flutter.",
+				"Desarrollé un puente nativo para integrar con Meta (Audience Network).",
+				"Configuré pipelines de CI/CD con CodeMagic.",
+				"Integración con servicios de firebase como (Remote config, Crashlytics, Firestore, App Config, Cloud Functions, Hosting, Analytics).",
+				"Creación y despliegue de APIs REST usando Cloudflare Workers + Hono.",
+				"Enfrenté múltiples retos técnicos complejos con integraciones nativas de iOS.",
+				"Distribución activa de apps en las tiendas (Play Store y App Store)."
+			],
+			"technologiesUsed": [
+				"Flutter",
+				"Google ADMob",
+				"SDKs",
+				"Meta (Audience Network)",
+				"CodeMagic",
+				"Firebase App Distribution",
+				"iOS"
+			]
+		},
+		{
+			"jobTitle": "Cloud Engineer",
+			"company": "Melonn",
+			"location": "Medellín, Antioquia, Colombia",
+			"startDate": "2022-04-01",
+			"endDate": "2025-03-31",
+			"description": [
+				"Desarrollé microservicios haciendo uso de NodeJs, Redis, Fastify, GraphQL, TypeScript, y un conjunto grande de servicios de la nube de AWS.",
+				"Creé servicios del core logic de la empresa, facturación, autenticación y apps.",
+				"Diseñé componentes principales del sistema de diseño de la empresa usando ReactJS y TypeScript.",
+				"Lideré la aplicación de operaciones gestionando el flujo de trabajo, PRs y planteando mejoras.",
+				"Mejoré el performance de la aplicación pasando de atender máximo 100 ítems por orden a más de 7.000, dando paso así al servicio B2B.",
+				"Participé de forma directa en el planteamiento y desarrollo de una mejor arquitectura para las apps.",
+				"Asumí el reto de construir una solución para adaptar las apps al sistema de DRP donde debí plantear soluciones alternativas para la carga de ambientes en tiempo de ejecución.",
+				"Construí acciones de Github para la distribución de las apps para distintos ambientes (DEV, QA, PROD) usando CodeMagic y Firebase App Distribution.",
+				"Lideré la API pública, que permite a los clientes integrar sus tiendas con la plataforma de Melonn.",
+				"Planteé y desarrollé las bases del sistema de la API pública.",
+				"Participé de forma activa en la recolección de requerimientos de los clientes directos de Melonn para la API pública."
+			],
+			"technologiesUsed": [
+				"NodeJs",
+				"Redis",
+				"Fastify",
+				"GraphQL",
+				"TypeScript",
+				"AWS",
+				"ReactJS",
+				"Firebase Realtime Database",
+				"CodeMagic",
+				"Firebase App Distribution",
+				"GitHub Actions",
+				"Flutter",
+				"Dart",
+				"iOS",
+				"Android",
+				"Firebase Remote Config"
+			]
+		},
+		{
+			"jobTitle": "Desarrollador de Android (Freelance)",
+			"company": "Smart locks",
+			"location": "Argentina",
+			"startDate": "2024-01-01",
+			"endDate": "2024-03-31",
+			"description": [
+				"Diseñé y desarrollé una app nativa para Android usando Kotlin + Jetpack Compose.",
+				"Implementé el uso de Bluetooth para la comunicación con los dispositivos de cerraduras.",
+				"Integré el uso del SDK de los dispositivos para su manipulación y control.",
+				"Aseguré una comunicación fluida y segura entre la app y los dispositivos.",
+				"Proporcioné una interfaz intuitiva y amigable para el usuario.",
+				"Configuré la comunicación en tiempo real entre dispositivos haciendo uso de Firebase Realtime Database."
+			],
+			"technologiesUsed": [
+				"Kotlin",
+				"Jetpack Compose",
+				"Bluetooth",
+				"Firebase Realtime Database",
+				"Firebase Remote Configs"
+			]
+		},
+		{
+			"jobTitle": "Desarrollador Front End (Freelance)",
+			"company": "Sumar Inversión",
+			"location": "Argentina",
+			"startDate": "2021-10-01",
+			"endDate": "2022-09-30",
+			"description": [
+				"Desarrollé la aplicación móvil para sumarinversion.com.ar utilizando Ionic 5 y Angular 12.",
+				"Mejoré el rendimiento de la aplicación y la experiencia del usuario con un nuevo diseño de marca.",
+				"Adapté y modifiqué los servicios backend existentes para integrarlos con la nueva app.",
+				"Colaboré con el equipo de diseño para asegurar una experiencia de usuario coherente y atractiva.",
+				"Desplegué la aplicación en las tiendas de aplicaciones (Google Play Store y Apple App Store)."
+			],
+			"technologiesUsed": [
+				"Ionic 5",
+				"Angular 12",
+				"React Native",
+				"Google Play Store",
+				"Apple App Store",
+				"PHP",
+				"TypeScript",
+				"NodeJS"
+			]
+		},
+		{
+			"jobTitle": "Consultor IT",
+			"company": "Rawson BPO",
+			"location": "Bogotá, Distrito Capital, Colombia",
+			"startDate": "2021-07-01",
+			"endDate": "2022-04-30",
+			"description": [
+				"Diseñé componentes principales del sistema de diseño de la empresa Goal System a través de VASS Latam, usando VueJS, Angular y TypeScript.",
+				"Aporté mejoras en la shell app para la gestión del estado compartido de los microfrontends.",
+				"Aporté mejoras en el sistema de selección de asientos de las salas de Cinemark a través de Modyo utilizando VueJS y Liquid.",
+				"Participé en el planteamiento y desarrollo del sistema de eventos internos para la comunicación entre microfrontends."
+			],
+			"technologiesUsed": [
+				"VueJS",
+				"Angular",
+				"TypeScript",
+				"Liquid"
+			]
+		},
+		{
+			"jobTitle": "Desarrollador Full Stack",
+			"company": "DB Solution",
+			"location": "Bogotá, Distrito Capital, Colombia",
+			"startDate": "2020-11-01",
+			"endDate": "2021-07-31",
+			"description": [
+				"Desarrollé servicios para la aplicación TuBeca de Chile utilizando NodeJS, TypeScript, Cognito y otros servicios de AWS.",
+				"Implementé características principales de la app TuBeca usando React Native, TypeScript.",
+				"Participé en el desarrollo de una plataforma para la facturación de energía en Chile usando NodeJS, VueJS, TypeScript y la nube de GCP."
+			],
+			"technologiesUsed": [
+				"NodeJS",
+				"TypeScript",
+				"Cognito",
+				"AWS",
+				"VueJS",
+				"GCP",
+				"React Native"
+			]
+		},
+		{
+			"jobTitle": "Consultor IT",
+			"company": "Rawson BPO",
+			"location": "Bogotá, Distrito Capital, Colombia",
+			"startDate": "2020-10-01",
+			"endDate": "2020-11-30",
+			"description": [
+				"Prestación de servicios como consultor IT y desarrollador Front End para clientes internos (Terpel) de Rawson utilizando el frameworks como VueJS y Angular",
+				"Desarrollo de componentes reutilizables y modulares para mejorar la eficiencia del desarrollo y la mantenibilidad del código.",
+				"Colaboración con diseñadores y otros desarrolladores",
+				"Implementación de mejoras en el rendimiento de la plataforma y la experiencia del usuario."
+			],
+			"technologiesUsed": [
+				"VueJS",
+				"Angular",
+				"TypeScript"
+			]
+		},
+		{
+			"jobTitle": "Desarrollador Full Stack (Freelance)",
+			"company": "Creator Studio Live",
+			"location": "Medellín, Antioquia, Colombia",
+			"startDate": "2020-02-01",
+			"endDate": "2022-10-31",
+			"description": [
+				"Creé y diseñé la arquitectura de la plataforma afrontando grandes retos que permitieran escalar de manera eficiente.",
+				"Diseñé una app para iOS y Android, para que los usuarios pudieran tener información detallada y en tiempo real de sus ingresos.",
+				"Desarrollé el sistema backend, para que los usuarios pudieran registrarse, iniciar sesión, ver sus ingresos, y solicitar pagos.",
+				"Implementé un sistema capaz de relacionar IPs, dispositivos y cuentas para evitar fraudes.",
+				"Generé reportes para el portal administrativo y un sistema de aprobación, baneo de usuarios y solicitudes de pagos.",
+				"Integré el uso de Firebase para el almacenamiento de datos, autenticación de usuarios, entre otras funcionalidades.",
+				"Integré el uso de Firebase Analytics para el seguimiento de eventos.",
+				"Integré el uso de Firebase Crashlytics para el seguimiento de errores.",
+				"Creé servicios y triggers para la sincronización de datos, haciendo uso de Firebase Cloud Functions.",
+				"Integré el SDK de RevenueCat para la implementación de pagos dentro de la app.",
+				"Aseguré una buena performance y fluidez en la app desarrollada en Flutter.",
+				"Proporcioné una interfaz intuitiva y amigable para el usuario.",
+				"Distribución activa de apps en las tiendas (Play Store y App Store)"
+			],
+			"technologiesUsed": [
+				"Laravel",
+				"VueJS",
+				"Ionic",
+				"Firebase",
+				"MySQL",
+				"AWS",
+				"Flutter",
+				"Dart",
+				"iOS",
+				"Android",
+				"Firebase Analytics",
+				"Firebase Crashlytics",
+				"Firebase Cloud Functions",
+				"RevenueCat"
+			]
+		},
+		{
+			"jobTitle": "Desarrollador Front End (Freelance)",
+			"company": "Sumar Inversión",
+			"location": "Argentina",
+			"startDate": "2019-06-01",
+			"endDate": "2019-11-30",
+			"description": [
+				"Mantenimiento y mejoras de una aplicación móvil existente utilizando React Native.",
+				"Implementación de nuevas funcionalidades según los requerimientos del cliente.",
+				"Colaboración con el equipo de diseño para asegurar una experiencia de usuario coherente y atractiva.",
+				"Despliegue de actualizaciones en las tiendas de aplicaciones (Google Play Store y Apple App Store)."
+			],
+			"technologiesUsed": [
+				"React Native",
+				"TypeScript",
+				"Google Play Store",
+				"Apple App Store"
+			]
+		},
+		{
+			"jobTitle": "Desarrollador Front End",
+			"company": "SuperPesos",
+			"location": "Bogotá, Distrito Capital, Colombia",
+			"startDate": "2019-12-01",
+			"endDate": "2020-06-30",
+			"description": [
+				"Desarrollé productos internos de la empresa utilizando el framework Angular e infraestructura de AWS.",
+				"Colaboré con el equipo de desarrollo para asegurar que los productos cumplieran con los requisitos y estándares de calidad.",
+				"Implementé mejoras en la experiencia del usuario y el rendimiento de las aplicaciones.",
+				"Desplegué las aplicaciones en el entorno de (desarrollo, pruebas, producción) en AWS."
+			],
+			"technologiesUsed": [
+				"Angular",
+				"TypeScript",
+				"AWS"
+			]
+		},
+		{
+			"jobTitle": "Diseñador UI/UX (Freelance)",
+			"company": "Development Pool S.A.S",
+			"location": "Barranquilla, Atlántico, Colombia",
+			"startDate": "2019-08-01",
+			"endDate": "2019-12-31",
+			"description": [
+				"Diseñé la interfaz de usuario de una aplicación móvil (Android e iOS) y plataforma web para un producto white label de la empresa.",
+				"Colaboré con el equipo de desarrollo para asegurar que el diseño se implementara correctamente en la aplicación móvil y plataforma web."
+			],
+			"technologiesUsed": [
+				"Figma"
+			]
+		},
+		{
+			"jobTitle": "Desarrollador Front End",
+			"company": "Corporación innlab S.A.S",
+			"location": "Santa Marta, Magdalena, Colombia",
+			"startDate": "2019-04-01",
+			"endDate": "2019-12-31",
+			"description": [
+				"Desarrollé la aplicación Fiapp utilizando el framework Ionic.",
+				"Distribución activa de apps en las tiendas (Play Store y App Store)."
+			],
+			"technologiesUsed": [
+				"Ionic",
+				"Angular",
+				"TypeScript"
+			]
+		},
+		{
+			"jobTitle": "Desarrollador Full Stack (Freelance)",
+			"company": "JQ Agencia",
+			"location": "Bogotá, Distrito Capital, Colombia",
+			"startDate": "2019-01-01",
+			"endDate": "2019-06-30",
+			"description": [
+				"Desarrollo de un sistema para la gestión industrial de recursos utilizando Laravel, Angular (Web) e Ionic (App)",
+				"Implementación de APIs RESTful para la comunicación entre el frontend y el backend",
+				"Creación de distintos ambientes (desarrollo, pruebas y producción) para asegurar la calidad y estabilidad del sistema antes de su despliegue final",
+				"Diseño y modelado de la base de datos para optimizar el almacenamiento y la recuperación de datos",
+				"Colaboración con el equipo de diseño para crear una interfaz de usuario intuitiva y atractiva"
+			],
+			"technologiesUsed": [
+				"Laravel",
+				"Angular",
+				"Ionic",
+				"MySQL"
+			]
+		},
+		{
+			"jobTitle": "Desarrollador Full Stack (Freelance)",
+			"company": "Apps Low Cost",
+			"location": "Medellín, Antioquia, Colombia",
+			"startDate": "2018-03-01",
+			"endDate": "2018-10-31",
+			"description": [
+				"Diseño y desarrollo de una plataforma para cursos online utilizando Laravel y VueJS",
+				"Implementación de funcionalidades para el registro e inicio de sesión de usuarios utilizando JWT",
+				"Desarrollo de un sistema de gestión de cursos, permitiendo a los usuarios ver los cursos disponibles, adquirir planes o suscripciones, y llevar un seguimiento de su progreso",
+				"Integración de pasarelas de pago para la adquisición de planes o suscripciones",
+				"Diseño y modelado de la base de datos"
+			],
+			"technologiesUsed": [
+				"Laravel",
+				"VueJS",
+				"MySQL",
+				"TypeScript",
+				"PHP"
+			]
+		},
+		{
+			"jobTitle": "Desarrollador Full Stack (Freelance)",
+			"company": "OverAlestur",
+			"location": "Santa Marta, Magdalena, Colombia",
+			"startDate": "2018-01-01",
+			"endDate": "2018-05-31",
+			"description": [
+				"Desarrollo de una plataforma web para la gestión de servicios de una empresa de turismo utilizando Laravel y VueJS",
+				"Implementación de funcionalidades para el registro e inicio de sesión de usuarios Administradores",
+				"Diseño y modelado de la base de datos"
+			],
+			"technologiesUsed": [
+				"Laravel",
+				"VueJS",
+				"TypeScript",
+				"MySQL",
+				"PHP"
+			]
+		},
+		{
+			"jobTitle": "Desarrollador Full Stack (Freelance)",
+			"company": "Aluna Studios",
+			"location": "Santa Marta, Magdalena, Colombia",
+			"startDate": "2017-01-01",
+			"endDate": "2017-08-31",
+			"description": [
+				"Desarrollo de una plataforma web para alquiler de libros utilizando Laravel y VueJS",
+				"Implementación de funcionalidades para el registro e inicio de sesión de usuarios Administradores",
+				"Diseño y modelado de la base de datos"
+			],
+			"technologiesUsed": [
+				"Laravel",
+				"VueJS",
+				"TypeScript",
+				"MySQL",
+				"PHP"
+			]
+		}
+	],
+	"projects": [
+		{
+			"name": "Recify: Healthy recipes",
+			"description": "Healthy recipe discovery and management",
+			"url": "https://appgallery.io/link/?dest=id6747731031&username=krrskl",
+			"image": "https://appgallery.io/assets/icons/b96e5214016a4f60b8aca6361ec1853f.jpg?id=6747731031",
+			"technologies": [
+				"Flutter",
+				"Dart",
+				"Firebase Remote Config",
+				"Firebase App Check",
+				"Firebase Crashlytics",
+				"Simple Analytics"
+			]
+		},
+		{
+			"name": "Tranqui Sleep",
+			"description": "Sleep sounds and meditation app",
+			"url": "https://appgallery.io/link/?dest=id6741135749&username=krrskl",
+			"image": "https://appgallery.io/assets/icons/10a9e3adb0a8f7e95f7599dd8a25eb71.jpg?id=6741135749",
+			"technologies": [
+				"Flutter",
+				"Dart",
+				"Firebase Remote Config",
+				"Firebase App Check",
+				"Firebase Crashlytics",
+				"Simple Analytics"
+			]
+		},
+		{
+			"name": "My Accounts",
+			"description": "Personal accounts management app",
+			"url": "https://appgallery.io/link/?dest=id6740662946&username=krrskl",
+			"image": "https://appgallery.io/assets/icons/54da263513138862f9e2ea8511df29dc.jpg?id=6740662946",
+			"technologies": [
+				"Ionic",
+				"Angular",
+				"TypeScript",
+				"Firebase Firestore",
+				"Firebase Remote Config",
+				"Firebase App Check",
+				"Firebase Crashlytics",
+				"Firebase Analytics",
+				"Firebase Cloud Functions",
+				"Resend"
+			]
+		},
+		{
+			"name": "Pix Saver",
+			"description": "Image saving and organization tool",
+			"url": "https://appgallery.io/link/?dest=id6740041754&username=krrskl",
+			"image": "https://appgallery.io/assets/icons/8f062ca2108358320134a588510ab5ed.jpg?id=6740041754",
+			"technologies": [
+				"Flutter",
+				"Dart",
+				"Firebase Remote Config",
+				"Firebase App Check",
+				"Firebase Crashlytics",
+				"Simple Analytics"
+			]
+		},
+		{
+			"name": "Card Smart",
+			"description": "Smart card management application",
+			"url": "https://appgallery.io/link/?dest=id6753664807&username=krrskl",
+			"image": "https://appgallery.io/assets/icons/3a6513b31e807fcd636c5b09da7f4c27.jpg?id=6753664807",
+			"technologies": [
+				"Flutter",
+				"Dart",
+				"Firebase Remote Config",
+				"Firebase App Check",
+				"Firebase Crashlytics",
+				"Simple Analytics"
+			]
+		},
+		{
+			"name": "Moodjar: Track your emotions",
+			"description": "Emotion and mood tracking app",
+			"url": "https://appgallery.io/link/?dest=id6749918537&username=krrskl",
+			"image": "https://appgallery.io/assets/icons/0fa041484bc16db6f84c6ae651f185cf.jpg?id=6749918537",
+			"technologies": [
+				"Flutter",
+				"Dart",
+				"Firebase Remote Config",
+				"Firebase App Check",
+				"Firebase Crashlytics",
+				"Simple Analytics"
+			]
+		},
+		{
+			"name": "Reemify",
+			"description": "Personal productivity and organization app",
+			"url": "https://appgallery.io/link/?dest=id6749296766&username=krrskl",
+			"image": "https://appgallery.io/assets/icons/86407d4b708565d23b284aae554c01d3.jpg?id=6749296766",
+			"technologies": [
+				"Flutter",
+				"Dart",
+				"Firebase Remote Config",
+				"Firebase App Check",
+				"Firebase Crashlytics",
+				"Simple Analytics"
+			]
+		},
+		{
+			"name": "Gym Track: Keep your progress",
+			"description": "Gym workout and progress tracking app",
+			"url": "https://appgallery.io/link/?dest=id6747011013&username=krrskl",
+			"image": "https://appgallery.io/assets/icons/797a16ade8ebd190e75dacac62079768.jpg?id=6747011013",
+			"technologies": [
+				"Flutter",
+				"Dart",
+				"Firebase Remote Config",
+				"Firebase App Check",
+				"Firebase Crashlytics",
+				"Simple Analytics"
+			]
+		},
+		{
+			"name": "Fasting Magical: Fast Tracker",
+			"description": "Intermittent fasting tracker",
+			"url": "https://appgallery.io/link/?dest=id6746575932&username=krrskl",
+			"image": "https://appgallery.io/assets/icons/ac1712b233171962065e5952fc9ef1d7.jpg?id=6746575932",
+			"technologies": [
+				"Flutter",
+				"Dart",
+				"Firebase Remote Config",
+				"Firebase App Check",
+				"Firebase Crashlytics",
+				"Simple Analytics"
+			]
+		},
+		{
+			"name": "Pix Paper",
+			"description": "Wallpaper and image collection app",
+			"url": "https://appgallery.io/link/?dest=id6746318534&username=krrskl",
+			"image": "https://appgallery.io/assets/icons/9717b247d97bafb2eb2d18e3a829b602.jpg?id=6746318534",
+			"technologies": [
+				"Flutter",
+				"Dart",
+				"Firebase Remote Config",
+				"Firebase App Check",
+				"Firebase Crashlytics",
+				"Simple Analytics"
+			]
+		}
+	],
+	"researchWork": [],
+	"achievements": [],
+	"education": [
+		{
+			"institution": "Universidad del Magdalena",
+			"degree": "Ingeniero de sistemas",
+			"fieldOfStudy": null,
+			"startDate": "2014-01-01",
+			"endDate": "2020-12-31",
+			"grade": null,
+			"description": null
+		},
+		{
+			"institution": "Universidad del Magdalena",
+			"degree": "Diplomado en seguridad de la Información y ciberseguridad",
+			"fieldOfStudy": "Ingeniería de sistemas",
+			"startDate": "2020-08-01",
+			"endDate": "2020-12-31",
+			"grade": null,
+			"description": null
+		},
+		{
+			"institution": "Servicio Nacional de Aprendizaje (SENA)",
+			"degree": "Creador de videojuegos",
+			"fieldOfStudy": "Web Development",
+			"startDate": "2013-01-01",
+			"endDate": "2013-01-31",
+			"grade": null,
+			"description": null
+		}
+	],
+	"extractedKeywords": [
+		"Mobile Development",
+		"Full Stack Development",
+		"Cloud Engineering",
+		"Front-end Development",
+		"Back-end Development",
+		"Android Development",
+		"iOS Development",
+		"Web Development",
+		"Flutter",
+		"Kotlin",
+		"React Native",
+		"Ionic",
+		"Jetpack Compose",
+		"ReactJS",
+		"Angular",
+		"VueJS",
+		"NodeJS",
+		"Laravel",
+		"TypeScript",
+		"PHP",
+		"AWS",
+		"GCP",
+		"Firebase",
+		"Firebase Realtime Database",
+		"Firebase App Distribution",
+		"MySQL",
+		"Redis",
+		"MongoDB",
+		"GraphQL",
+		"Fastify",
+		"RESTful APIs",
+		"Microservices",
+		"Google ADMob",
+		"Meta Audience Network",
+		"Unity Ads",
+		"Bluetooth",
+		"CI/CD",
+		"CodeMagic",
+		"Clean Architecture",
+		"Riverpod",
+		"Cognito",
+		"JWT",
+		"Liquid",
+		"SDKs",
+		"Native Development",
+		"Microfrontends",
+		"Git"
+	]
+}
