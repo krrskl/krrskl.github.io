@@ -4,9 +4,5 @@
   "name": "krrskl",
   "compatibility_date": "2025-09-13",
   "compatibility_flags": [],
-  "pages_build_output_dir": "./dist",
-  "assets": {
-    "binding": "ASSETS",
-    "directory": "./dist"
-  }
+  "pages_build_output_dir": "./dist"
 }
