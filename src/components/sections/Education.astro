@@ -1,0 +1,13 @@
+---
+import { getEducation } from "../../utils/profile";
+import EducationItem from "../EducationItem.astro";
+
+const education = getEducation();
+---
+
+<section class="education-section">
+	<h2 class="section-title">Educación</h2>
+	<div class="education-list">
+		{education.map((edu) => <EducationItem education={edu} />)}
+	</div>
+</section>

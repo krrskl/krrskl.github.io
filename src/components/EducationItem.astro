@@ -1,0 +1,39 @@
+---
+import type { Education } from "../utils/profile";
+
+interface Props {
+	education: Education;
+}
+
+const { education } = Astro.props;
+
+const formatDate = (dateString: string) => {
+	const date = new Date(dateString);
+	return date.getFullYear();
+};
+---
+
+<article class="education-item">
+	<div class="education-header">
+		<h3 class="education-degree">{education.degree}</h3>
+		<div class="education-institution">{education.institution}</div>
+		{education.fieldOfStudy && (
+				<div class="education-field">{education.fieldOfStudy}</div>
+			)}
+		<div class="education-dates">
+			{formatDate(education.startDate)} - {formatDate(education.endDate)}
+		</div>
+	</div>
+
+	{education.description && (
+			<div class="education-description">
+				<p>{education.description}</p>
+			</div>
+		)}
+
+	{education.grade && (
+			<div class="education-grade">
+				<span>Calificación: {education.grade}</span>
+			</div>
+		)}
+</article>
