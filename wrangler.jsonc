@@ -1,0 +1,10 @@
+{
+  "main": "dist/_worker.js/index.js",
+  "name": "krrskl",
+  "compatibility_date": "2025-03-25",
+  "compatibility_flags": [],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist"
+  }
+}
