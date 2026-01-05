@@ -1,8 +1,10 @@
 {
+  "$schema": "node_modules/wrangler/config-schema.json",
   "main": "dist/_worker.js/index.js",
   "name": "krrskl",
-  "compatibility_date": "2025-03-25",
+  "compatibility_date": "2025-09-13",
   "compatibility_flags": [],
+  "pages_build_output_dir": "./dist",
   "assets": {
     "binding": "ASSETS",
     "directory": "./dist"
